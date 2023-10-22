@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './user.css'
 import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from '@mui/icons-material'
 export default function User() {
@@ -5,12 +6,14 @@ export default function User() {
         <div className="user">
             <div className="userTitleContainer">
                 <h1 className="userTitle">Edit User</h1>
-                <button className="userAddButton">Create</button>
+                <Link to="/newUser">
+                    <button className="userAddButton">Create</button>
+                </Link>
             </div>
             <div className="userContainer">
                 <div className="userShow">
                     <div className="userShowTop">
-                        <img src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="userShowImg" />
+                        <img src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="userShowImg" />
                         <div className="userShowTopTitle">
                             <span className="userShowUsername">Anna Becker</span>
                             <span className="userShowUserTitle">Software engineer</span>
@@ -88,11 +91,11 @@ export default function User() {
                         </div>
                         <div className="userUpdateRight">
                             <div className="userUpdateUpload">
-                                <img src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="userUpdateImg" />
-                                <label htmlFor="file"><Publish/></label>
-                                <input type="file" id="file"/>
-
+                                <img src="https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="userUpdateImg" />
+                                <label htmlFor="file"><Publish className="userUpdateIcon" /></label>
+                                <input type="file" id="file" style={{ display: "none" }}/>
                             </div>
+                            <button className="userUpdateButton">Update</button>
                         </div>
                     </form>
                 </div>
